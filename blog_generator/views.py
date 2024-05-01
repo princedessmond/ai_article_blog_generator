@@ -76,7 +76,7 @@ def get_transcription(link):
     audio_file = download_audio(link)
 
     # api key from assembly ai
-    aai.settings.api_key = "3fd299c683c141399d9d017b431bd9db"
+    aai.settings.api_key = os.getenv("API_KEY")
 
     # create transcriber object
     transcriber = aai.Transcriber()
